@@ -1,0 +1,231 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: "Oswald", sans-serif
+}
+
+.container{
+    width: 100%;
+    height: 100vh; /*vh=19.2px*/
+    position: relative;
+}
+.navbar{
+    display: flex; /*place child element side by side*/
+    width: 85%;
+    justify-content: space-between; /*space between the child*/
+    margin-left: 80px;
+    align-items: center;  /*align childs vertically center*/
+}
+#logo{
+    width: 110px;
+}
+.litem{
+    display: inline-block; /*to place each element side by side*/
+    list-style: none; /*remove list styles*/
+    margin: 10px 20px;
+}
+.link{
+    color: black;
+    text-decoration: none; /*to remove underline*/
+    font-weight: bold;
+}
+.link:hover{
+    color: red;
+}
+.title{
+    margin-left: 8%;
+    margin-top: 13%;
+}
+.title h1{
+    font-size: 54px;
+    font-family: "Rubik", sans-serif;
+    margin-bottom: 25px;
+}
+#lname{
+    color: orangered;
+}
+.download{
+    background: black;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    display: inline-block; /*to align the content to next line*/
+    margin-top: 30px;
+}
+.images{
+    width: 45%;
+    height: 80%;
+    position: absolute;  /* to positioned relative with its parent */
+    right: 20px;
+    bottom: 0px;
+}
+.homeimg{
+    position: absolute; /* to align both all images in class at same position  */
+    height: 100%;
+    left: 50%;
+    bottom: 0px;
+    transform: translate(-50%); /* to nullify its actual position */
+    transition: bottom 1s, left 2s; /* to set the time of transitions in the divition */
+}
+.images:hover #girl{
+    left: 40%; /* to move girl image 40% to left */
+}
+.images:hover #shape{
+    bottom: 50px;  /* to move shape to 50px of divition  bottom */
+}
+#about{
+    margin: 13% 8% 0 8%;
+}
+.heading{
+    text-align: center;
+}
+.heading h1{
+    font-size: 35px;
+    font-family: "Rubik", sans-serif;
+}
+.heading span{
+    font-size: 22px;
+    color: green;
+    font-family: "Rubik", sans-serif;
+}
+.about-cont{
+    margin-top: 10px;
+    display: grid; /* to create grid */
+    grid-template-columns: repeat(2,1fr); /* created two columns each contains 1fr size (1fr==225px) */
+    gap: 30px;
+}
+.about-img img {
+    width: 80%;
+}
+.details{
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: 400;
+}
+.para1{
+    text-align: justify;
+}
+.info{
+    margin-top: 15px;
+}
+.info-box{
+    margin-bottom: 10px;
+}
+.info-box span{
+    margin-left: 15px;
+}
+#skills{
+    margin: 8% 8% 0% 8%;
+}
+.skills-cont{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 2rem;    /* 1 rem=16px */
+    margin-top: 40px;
+}
+.skill-img img{
+    width: 95%;
+}
+.infograph{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0px;
+    margin-bottom: 1.25rem;
+    align-items: center;
+    position: relative;
+}
+.infograph span{
+    font-size: 20px;
+    font-weight: 600;
+}
+.bar-box{
+    width: 100%;
+    height: 0.5rem;
+    background-color: black;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+}
+#htmlbar{
+    background-color: orange;
+    width: 95%;
+}
+#cssbar{
+    background-color: orange;
+    width: 88%;
+}
+#jsbar{
+    background-color: orange;
+    width: 89%;
+}
+#reactbar{
+    background-color: orange;
+    width: 85%;
+}
+#contact{
+    margin: 8% 8% 0 8%;
+}
+.contacts{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* above three steps used to align the icons to center and line by line */
+    margin-top: 3%;
+}
+.icon, .up{
+    width: 50px;
+    height: 50px;
+    /* border: 1px solid; */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    margin: 0px 8px;
+}
+.icon i{
+    font-size: 35px;
+    color: black;
+}
+.icon:hover{
+    background-image: linear-gradient(to top left, orangered, yellow);
+}
+.icon:hover i{
+    color: white;
+    animation: shake 1s;
+}
+/* creating animation shake */
+@keyframes shake{
+    10%{
+        transform: rotate(15deg);
+    }
+    20%{
+        transform: rotate(-15deg);
+    }
+    30%{
+        transform: rotate(15deg);
+    }
+    40%{
+        transform: rotate(-15deg);
+    }
+}
+footer{
+    margin: 50px 0px;
+}
+footer p{
+    text-align: center;
+    font-weight: 600;
+    font-size: 16px;
+}
+.up{
+    float: right;
+    background-image: linear-gradient(to top left, orangered, yellow);
+}
+.up:hover i{
+    color: white;
+}
+html{
+    scroll-behavior: smooth;
+}
